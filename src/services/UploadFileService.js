@@ -4,7 +4,7 @@ class UploadFileService {
     upload(file, onUploadProgress) {
         let formData = new FormData();
         formData.append("file", file);
-        return http.post("/api/v1/file/upload-file", formData, {
+        return http.post("/file/upload-file", formData, {
             headers: {
                 "Content-Type": "multipart/form-data"
             },
@@ -13,7 +13,7 @@ class UploadFileService {
     }
 
     getFiles() {
-        return http.get("/api/v1/file/files");
+        return http.get("/file/files");
     }
 }
 
