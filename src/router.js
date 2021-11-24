@@ -21,6 +21,16 @@ export default new Router({
             path: "/tutorials/add",
             name: "add-tutorial",
             component: () => import("./components/AddTutorial")
+        },
+        {
+            path: "/upload/file",
+            name: "upload-file",
+            component: () => import("./components/UploadFile")
+        },
+        {
+            path: "/upload/files",
+            name: "upload-files",
+            component: () => import("./components/UploadFiles")
         }
     ]
 });
